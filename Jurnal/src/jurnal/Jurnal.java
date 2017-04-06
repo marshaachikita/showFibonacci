@@ -21,6 +21,7 @@ public class Jurnal {
         int b = 0;
         int c = 1;
         int data;
+        int total = 0;
         
         System.out.print("Input: ");
         Scanner show = new Scanner(System.in);
@@ -28,9 +29,13 @@ public class Jurnal {
         
         for(int i = 1; i <= data; i++){
             c = a+b; 
-            System.out.print(c+" ");
+            System.out.print(c+"+");
             a = b;
             b = c;
+            total = total+c;
+            if(i==data){
+                System.out.println(" = "+total);
+            }
         }
         
     }
